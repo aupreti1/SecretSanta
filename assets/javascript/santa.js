@@ -3,27 +3,26 @@ var names = ["Ana", "Alex", "Brittany",
 "Seth", "Sean", "Shelby", "Zachary",
 "McKenzie", "Shyanne", "Luke"]
 
-var split = function(i, xs) {
-    var a = xs.slice(0, i);
-    var b = xs.slice(i, xs.length);
-    return [a, b];
-};
+if (names.length % 2 != 0) {
+    connsole.log("You must have an even number of names. You currently have " + names.length + " names.");
+} else {
+    var arr1 = names.slice(), // copy array
+        arr2 = names.slice(); // copy array again
 
-var shuffle = function(xs) {
-    return xs.splice(0).sort(function() {
-        return .5 - Math.random();
-    });
-};
+    arr1.sort(function() { return 0.5 - Math.random();}); // shuffle arrays
+    arr2.sort(function() { return 0.5 - Math.random();});
 
-var zip = function(xs) {
-    return xs[0].map(function(_, i) {
-        return xs.map(function(x) {
-            return x[i];
-        });
-    });
+    while (arr1.length) {
+        var name1 = arr1.pop(), 
+            name2 = arr2[0] == name1 ? arr2.pop() : arr2.shift();
+            
+        console.log(name1 + ' gets ' + name2);
+    }
 }
 
-var result = zip(split(names.length/2, shuffle(names)));
+document.write(name1 + ' gets ' + name2);
 
-console.log(result);
+
+
+
 
