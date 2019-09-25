@@ -22,7 +22,18 @@ if (names.length % 2 != 0) {
 
 document.write(name1 + ' gets ' + name2);
 
+//Done for the night
+function nextPair(current, names) {
+    var index = names.indexOf(current)
+    if (index === names.length - 1) {
+        return names[0]
+    }
+    return names[index = 1]
+}
 
-
+next.addEventListener('click', function() {
+    var newSanta = nextPair(name1 + name2, names)
+    (name1 + ' gets ' + name2) = newSanta
+})
 
 
