@@ -4,6 +4,7 @@ var names = ["Ana", "Alex", "Brittany",
 "McKenzie", "Shyanne", "Luke"]
 
 var currentItemIndex = 14;
+var myItemObjectArray = match;
 
 
 if (names.length % 2 != 0) {
@@ -25,17 +26,17 @@ if (names.length % 2 != 0) {
     }
 }
 
-var myItemObjectArray = match;
-var currentItemIndex = 14;
+document.write(name1);
 
+function showPartner() {
+  document.getElementById("name2").innerHTML = name2;
+}
 
-function getNext()
-        {
-            currentItemIndex++;
-
-        }  
-
-document.write(match);
+index = match.indexOf();
+if(index >= 0 && index < match.length - 1)
+   nextItem = match[index + 1]
+   document.getElementById("match").innerHTML = match;
+   
 
 
 
